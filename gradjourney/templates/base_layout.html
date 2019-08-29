@@ -1,0 +1,17 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My MSCS course journey at Northeastern University, Boston</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}"
+  </head>
+  <body>
+<div class="wrapper">
+{% block content %}
+{% endblock %}
+  </div>
+
+      </body>
+    </html>

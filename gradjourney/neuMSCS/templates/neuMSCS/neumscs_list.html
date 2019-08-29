@@ -1,14 +1,7 @@
-{% load static from staticfiles %}
+  {% extends 'base_layout.html' %}
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>My MSCS course journey at Northeastern University, Boston</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}"
-  </head>
-  <body>
-<h1>My MSCS course journey at Northeastern University, Boston</h1>
+ {% block content %}
+<h1>My MSCS course journey at Northeastern Universityyy!!!!, Boston</h1>
   <div class="articles">
 {% for article in articles %}
   <div class="article">
@@ -18,6 +11,4 @@
   </div>
 {% endfor %}
 </div>
-
-  </body>
-</html>
+{% endblock %}
