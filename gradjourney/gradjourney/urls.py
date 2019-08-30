@@ -8,7 +8,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     url('admin/', admin.site.urls),
-    url(r'^neumscs/$',include('neuMSCS.urls')),
+    url(r'^neumscs/',include('neuMSCS.urls')),
     url(r'^about/$',views.about),
     url(r'^$',views.homepage),
 ]
