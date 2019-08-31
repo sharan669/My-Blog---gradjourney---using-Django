@@ -5,13 +5,14 @@ from . import views # since view is already in teh current directory so...
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static
 from django.conf import settings
+from neuMSCS import views as neuMSCS_views
 
 
 urlpatterns = [
     url('admin/', admin.site.urls),
     url(r'^neumscs/',include('neuMSCS.urls')),
     url(r'^about/$',views.about),
-    url(r'^$',views.homepage),
+    url(r'^$',neuMSCS_views.neu_mscs_List,name="home"),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
