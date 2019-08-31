@@ -9,4 +9,6 @@ def neu_mscs_List(request):
     return render(request,'neuMSCS/neumscs_list.html', {'articles':articles})
 
 def article_detail(request,slug):
-    return HttpResponse(slug)
+    #return HttpResponse(slug)
+    article=Article.objects.get(slug=slug)
+    return render(request,'neuMSCS/article_detail.html', {'article':article})
